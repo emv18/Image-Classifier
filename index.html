@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dog Style UI</title>
+  <title>Beautiful UI</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f2f2f2;
       margin: 0;
       padding: 0;
-    }
-
-    .header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
     }
 
     .container {
@@ -26,61 +19,100 @@
       border-radius: 5px;
     }
 
-    .dog-image {
+    .header {
+      background-color: #6c5ce7;
+      color: #fff;
+      padding: 20px;
       text-align: center;
+      border-radius: 5px 5px 0 0;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-content {
+      margin-top: 20px;
+    }
+
+    .feature-box {
+      display: flex;
+      align-items: center;
       margin-bottom: 20px;
     }
 
-    .dog-image img {
-      max-width: 300px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .dog-info {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .dog-name {
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background-color: #6c5ce7;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 24px;
-      font-weight: bold;
+      color: #fff;
+      margin-right: 20px;
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
       margin-bottom: 10px;
     }
 
-    .dog-description {
+    p {
+      margin: 0;
+      padding: 0;
       color: #777;
-      margin-bottom: 10px;
     }
 
-    .dog-button {
+    .cta-button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #4caf50;
+      background-color: #6c5ce7;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
 
-    .dog-button:hover {
-      background-color: #45a049;
+    .cta-button:hover {
+      background-color: #4834d4;
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <h1>Dog Style UI</h1>
-  </header>
   <div class="container">
-    <div class="dog-image">
-      <img src="dog.jpg" alt="Dog Image">
-    </div>
-    <div class="dog-info">
-      <h2 class="dog-name">Buddy</h2>
-      <p class="dog-description">Buddy is a friendly and playful dog.</p>
-      <a href="#" class="dog-button">Adopt Buddy</a>
-    </div>
-  </div>
-</body>
-</html>
+    <header class="header">
+      <h1>Beautiful UI</h1>
+    </header>
+    <div class="main-content">
+      <div class="feature-box">
+        <div class="feature-icon">A</div>
+        <div class="feature-text">
+          <h2>Feature 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">B</div>
+        <div class="feature-text">
+          <h2>Feature 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">C</div>
+        <div class="feature-text">
+          <h2>Feature 3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </
