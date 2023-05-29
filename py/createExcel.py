@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image
 
 # Set the path to the folder containing the images
-folder_path = './images'
+folder_path = './Images/All Dogs/'
 
 # Initialize empty lists to store the image names, ids, and types
 image_names = []
