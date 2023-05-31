@@ -25,7 +25,12 @@ while True:
 '''
 
 # Load and show an image
-image = imread('./Images/All Dogs/perro1.jpg')
+# Samoyed Image
+#image = imread('./Images/All Dogs/perro1.jpg')
+# Pomeranian Image
+image = imread('./Images/All Dogs/perro219.jpg')
+# Xolitzquintle Image
+#image = imread('./Images/All Dogs/perro438.jpg')
 #imshow(image)
 
 # Check the image shape 
@@ -157,6 +162,7 @@ plt.show()
 #print(feature)
 #print(feature6_browns)
 
+# This piece of code was made to create a csv file for each feature
 
 createCSV.create_csv(feature1_reds, 'red_features.csv')
 createCSV.create_csv(feature2_greens, 'green_features.csv')
@@ -164,6 +170,18 @@ createCSV.create_csv(feature3_blues, 'blue_features.csv')
 createCSV.create_csv(feature4_whites, 'white_features.csv')
 createCSV.create_csv(feature5_blacks, 'black_features.csv')
 createCSV.create_csv(feature6_browns, 'brown_features.csv')
+
+'''
+columns = {
+    'reds': feature1_reds,
+    'greens': feature2_greens,
+    'blues': feature3_blues,
+    'whites': feature4_whites,
+    'blacks': feature5_blacks,
+    'browns': feature6_browns
+}
+createCSV.create_csv(columns, 'all_features.csv')
+'''
 
 
 

@@ -1,114 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <!-- External JS libraries -->
-  <script src="js/d3.min.js"></script>
-  <!-- Custom JS -->
-  <script src="js/main.js"></script>
-  <title>Dog Breed Classifier</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <link rel="icon" type="image/x-icon" href="/Images/Graphic Resources/favicon.png">
+    <!-- External JS libraries -->
+    <!-- <script src="js/d3.min.js"></script> -->
+    <!-- Custom JS -->
+    <title>DBC</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
 
-    .container {
-      max-width: 100%;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #f8f8f8;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
+      .container {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
 
-    .header {
-      background-color: #66b3b9;
-      color: #f8f8f8;
-      padding: 20px;
-      text-align: center;
-      border-radius: 5px 5px 0 0;
-    }
+      .header {
+        background-color: #66b3b9;
+        color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px 5px 0 0;
+      }
 
-    h1 {
-      font-size: 32px;
-      margin: 0;
-      padding: 0;
-    }
+      h1 {
+        font-size: 32px;
+        margin: 0;
+        padding: 0;
+      }
 
-    .main-content {
-      margin-top: 20px;
-    }
+      .main-content {
+        margin-top: 20px;
+      }
 
-    .feature-box {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
+      .feature-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
 
-    .feature-icon {
-      width: 80px;
-      height: 80px;
-      background-color: #66b3b9;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      color: #f8f8f8;
-      margin-right: 20px;
-    }
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        background-color: #66b3b9;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: #f8f8f8;
+        margin-right: 20px;
+      }
 
-    .feature-text {
-      flex: 1;
-    }
+      .feature-text {
+        flex: 1;
+      }
 
-    h2 {
-      font-size: 24px;
-      margin: 0;
-      padding: 0;
-      margin-bottom: 10px;
-    }
+      h2 {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+      }
 
-    p {
-      margin: 0;
-      padding: 0;
-      color: #333333;
-      text-align: justify;
-    }
+      p {
+        margin: 0;
+        padding: 0;
+        color: #333333;
+        text-align: justify;
+      }
 
-    .cta-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #f7c556;
-      color: #f8f8f8;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
+      .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #f7c556;
+        color: #f8f8f8;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
 
-    .cta-button:hover {
-      background-color: #66b3b9;
-    }
+      .cta-button:hover {
+        background-color: #66b3b9;
+      }
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+      .form-group {
+        margin-bottom: 20px;
+      }
 
-    .form-group label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
 
-    .form-group input[type="file"] {
-      display: block;
-    }
-  </style>
-</head>
+      .form-group input[type="file"] {
+        display: block;
+      }
+    </style>
+  </head>
 <body>
   <div class="container">
       <header class="header">
@@ -142,7 +143,8 @@
       </div>
       <br>
       <div style="background-color: #f7c556; color: #f8f8f8; text-align: center; height: 120px; padding-left: 90px; padding-top: 80px; font-size: 20px;">
-        In the next section, it describes the features for each dog breed with some samples of the image classifier.
+        In the next section, it describes the features for each dog breed with some samples of the image classifier. 
+        Also, we can observe a histogram representing the values of reds, greens, blues, whites, blacks and browns made with d3.
       </div>
       <br>
       <br>
@@ -154,6 +156,12 @@
           </div>
         </div>
       </div>
+      <div><p><b>EXPLANATION:</b>This histogram represents the values of reds, greens, blues, whites, blacks, and browns from one image of the whole sample of Xoloitzquintles.
+            This graph uses the vectorized data of the color values of the image. With this information we can continue exploring the training and prediction for our 
+            dog breed image classifier. In this example for Xoloitzquintles, we have more whites, greens and reds.</p></div>
+      <br>
+      <br>
+      <div id="chart-histogram-xolo" style="margin-left: 30%;"></div>
       <div class="main-content" style="text-align: center;">
         <div class="feature-box">
           <div class="feature-text">
@@ -162,6 +170,12 @@
           </div>
         </div>
       </div>
+      <div><p><b>EXPLANATION:</b>This histogram represents the values of reds, greens, blues, whites, blacks, and browns from one image of the whole sample of Pomeranians.
+        This graph uses the vectorized data of the color values of the image. With this information we can continue exploring the training and prediction for our 
+        dog breed image classifier. In this example for Pomeranians, we have more blues and blacks.</p></div>
+      <br>
+      <br>
+      <div id="chart-histogram-pomeranian" style="margin-left: 30%;"></div>
       <div class="main-content" style="text-align: center;">
         <div class="feature-box">
           <div class="feature-text">
@@ -170,12 +184,16 @@
           </div>
         </div>
       </div>
+      <div><p><b>EXPLANATION:</b>This histogram represents the values of reds, greens, blues, whites, blacks, and browns from one image of the whole sample of Samoyeds.
+        This graph uses the vectorized data of the color values of the image. With this information we can continue exploring the training and prediction for our 
+        dog breed image classifier. In this example for Samoyeds, we have more reds, browns and whites.</p></div>
+      <br>
+      <br>
+      <div id="chart-histogram-samoyed" style="margin-left: 30%;"></div>
     </div>
     <br>
-    <div style="background-color: #f7c556; color: #f8f8f8; text-align: center; height: 120px; padding-left: 90px; padding-top: 80px; font-size: 20px;">
-      Next, we can observe a histogram representing the values of reds, greens, blues, whites, blacks and browns made with d3.
-    </div>
     <br>
     <br>
+    <script src="js/main.js"></script> 
   </body>
 </html>
